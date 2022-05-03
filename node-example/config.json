@@ -1,0 +1,29 @@
+{
+    "log": {
+        "loglevel": "info"
+    },
+    "inbounds": [
+        {
+            "listen": "0.0.0.0",
+            "port": 1080,
+            "protocol": "socks",
+            "settings": {
+                "auth": "noauth",
+                "accounts": [
+                    {
+                        "user": "",
+                        "pass": ""
+                    }
+                ]
+            },
+            "udp": true,
+            "userLevel": 0
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "tag": "direct"
+        }
+    ]
+}

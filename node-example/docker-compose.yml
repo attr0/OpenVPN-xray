@@ -1,0 +1,20 @@
+version: "3"
+services:
+  example:
+    # image
+    image: openvpn-xray
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    # xray configuration
+    container_name: example
+    ports:
+      - 0.0.0.0:1080:1080
+    volumes:
+      - ./vpn.ovpn:/vpn.ovpn
+      - ./vpn.auth:/vpn.auth
+      - ./config.json:/usr/local/etc/xray/config.json
+      #- ./ssl.key:/ssl.key
+      #- ./ssl.pem:/ssl.pem
