@@ -73,7 +73,6 @@ There are four configurations.
     ```
     auth-user-pass
     ```
-
     To
 
     ```
@@ -142,4 +141,4 @@ docker restart <your_container_name>
     ```
 
 
-Enjoy it.
+Enjoy it & Star⭐ it
